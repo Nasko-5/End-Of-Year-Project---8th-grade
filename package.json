@@ -12,10 +12,12 @@
   "license": "MIT",
   "dependencies": {
     "98.css": "^0.1.20",
+    "body-parser": "^1.20.2",
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
+    "node-cmd": "^5.0.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {
