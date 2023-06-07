@@ -11,6 +11,7 @@ router.post('/update/:activate', async (req, res, next) => {
     cmd.run("git pull")
   } else {
     res.status(418).send({message:'didn\'t fetch'})
+    console.log("test")
   }
   
 });
