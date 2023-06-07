@@ -15,7 +15,6 @@ app.use(morgan('dev'));
 
 app.use('/', require('./routes/index.route'));
 
-app.use('/', require('./routes/update.route'));
 
 app.use((req, res, next) => {
   next(createError.NotFound());
