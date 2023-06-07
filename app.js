@@ -1,22 +1,19 @@
 const express = require('express');
 const createError = require('http-errors');
 const morgan = require('morgan');
-const pug = require("pug")
-
 
 require('dotenv').config();
 
 const app = express();
-app.set('view engine', 'pug');
-app.set('views', './views');
+app.set('view engine', 'ejs'); 
+app.set('views', __dirname + '/views');
 
+app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 
-app.get('/', async (req, res, next) => {
-  res.render('index', { title: 'awsome test project'})
-});
+app.use('/', require('./routes/index.route'));
 
 app.use('/api', require('./routes/api.route'));
 
