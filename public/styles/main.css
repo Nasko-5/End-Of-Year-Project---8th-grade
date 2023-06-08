@@ -5,3 +5,7 @@ h3 { font-size: 1.17rem !important; }
 .draggable {
     position: absolute;
 }
+
+body {
+    background-color: #008080;
+}
