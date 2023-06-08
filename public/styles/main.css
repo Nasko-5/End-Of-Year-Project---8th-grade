@@ -4,8 +4,40 @@ h3 { font-size: 1.17rem !important; }
 
 .draggable {
     position: absolute;
+    padding: 0px;
 }
+
+.containsiframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+iframe {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+    margin:0px;
+    padding:0px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
 
 body {
     background-color: #008080;
+    scrollbar-width: 0px;  /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+

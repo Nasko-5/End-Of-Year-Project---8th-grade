@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/98.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <!-- i DO NOT know how ANY of this works, but dont touch it or it'll break everything thxx -->
     <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+   
     <script src="/js/draggable.js"></script>
+    <script src="/js/windowMaker.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/98.css"/>
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <div class="window draggable" style="width: 300px">
+    <div class="icon" iframelink="/radical"></div>
+
+    <!-- <div class="window draggable" style="width: 300px">
         <div class="title-bar" id="">
           <div class="title-bar-text">A Complete Window</div>
           <div class="title-bar-controls">
@@ -25,7 +30,7 @@
         <div class="window-body">
             <p>this should work now :O</p>
         </div>
-      </div>
+      </div> -->
 
       <div class="window draggable" style="width: 300px">
         <div class="title-bar" id="">
@@ -35,10 +40,10 @@
           </div>
         </div>
         <div class="window-body">
-            <p>yesssss </p>
+            <iframe src="/radical" frameborder="0" style="padding:0px;"></iframe>
         </div>
       </div>
 
-      <script src="/js/draggable.js"></script>
+      <!-- <div class="draggable"><iframe src="\radical" frameborder="0" style="width:350px;height:250px;"></iframe></div> -->
 </body>
 </html>
