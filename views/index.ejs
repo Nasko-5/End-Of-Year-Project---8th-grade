@@ -8,6 +8,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <!-- i DO NOT know how ANY of this works, but dont touch it or it'll break everything thxx -->
+    <!-- Okay i may be have a SLIGHT idea.. first one is required for jquery to work at all(>) and second one is for ui stuff
+         i dont have to include it in the program views though since they wont be using it (maybe?)
+    -->
     <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
    
@@ -18,32 +21,26 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <div class="icon" iframelink="/radical"></div>
+    <div id="programs">
+        <div 
+            style="background-image: url(/images/icons/utopia_smiley.png);"
+            class="icon"
+            iframelink="/radical" 
+            window-name="radical program!!" 
+            window-width="300px" 
+            window-height="200px"
+        ></div>
 
-    <!-- <div class="window draggable" style="width: 300px">
-        <div class="title-bar" id="">
-          <div class="title-bar-text">A Complete Window</div>
-          <div class="title-bar-controls">
-            <button aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="window-body">
-            <p>this should work now :O</p>
-        </div>
-      </div> -->
-
-      <div class="window draggable" style="width: 300px">
-        <div class="title-bar" id="">
-          <div class="title-bar-text">Another (hopefully) draggable window!!!</div>
-          <div class="title-bar-controls">
-            <button aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="window-body">
-            <iframe src="/radical" frameborder="0" style="padding:0px;"></iframe>
-        </div>
-      </div>
-
+        <div 
+            style="background-image: url(/images/icons/clock-1.png);"
+            class="icon" 
+            iframelink="/clock" 
+            window-name="Possibly Functioning Clock"
+            window-width="300px" 
+            window-height="200px"
+        ></div>
+    </div>
+    
       <!-- <div class="draggable"><iframe src="\radical" frameborder="0" style="width:350px;height:250px;"></iframe></div> -->
 </body>
 </html>

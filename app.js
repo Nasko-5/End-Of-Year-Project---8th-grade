@@ -17,6 +17,8 @@ app.use('/', require('./routes/index.route'));
 
 app.use('/', require('./routes/radical.route'));
 
+app.use('/', require('./routes/clock.route'));
+
 app.use((req, res, next) => {
   next(createError.NotFound());
 });

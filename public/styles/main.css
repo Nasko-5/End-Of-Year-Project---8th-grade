@@ -25,9 +25,10 @@ iframe {
 }
 
 .icon {
-    width: 100px;
-    height: 100px;
-    background-color: white;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    image-rendering: pixelated;
 }
 
 
@@ -35,6 +36,17 @@ body {
     background-color: #008080;
     scrollbar-width: 0px;  /* For Firefox */
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+
+}
+
+#programs {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items:center;
+    padding: 40px 10px;
+    gap: 40px;
+
 }
 
 ::-webkit-scrollbar {
