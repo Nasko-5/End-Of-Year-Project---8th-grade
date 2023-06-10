@@ -1,21 +1,40 @@
-var windowTemplate = ""
+$(document).ready(function() {
+    const $body = $('body');
 
-// var windowPosX = (window.innerWidth/2)-windowwidth;
-// var windowPosY = (window.innerHeight/2)-windowheight;
+    // Handle double-click event for elements with the "icon" class
+    $body.on('dblclick', '.icon', function() {
+        const $this = $(this);
+        const iframeLink = $this.attr('iframelink');
+        const windowName = $this.attr('window-name');
+        const windowWidth = $this.attr('window-width');
+        const windowHeight = $this.attr('window-height');
+        const iconStyle = $this.attr('style');
 
-$("document").ready(function() {
-    // detect double click for every element with the icon class
-    $(".icon").dblclick(function() {
-        var iframelink =  $(this).attr("iframelink");
-        var windowname = $(this).attr("window-name");
+        const windowPosX = (window.innerWidth / 2) - (parseInt(windowWidth) / 2);
+        const windowPosY = (window.innerHeight / 2) - (parseInt(windowHeight) / 2);
 
-        var windowwidth = $(this).attr("window-width");
-        var windowheight = $(this).attr("window-height");
+        const windowTemplate = createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, windowPosX, windowPosY);
 
-        windowTemplate = "<div class=\"window draggable ui-draggable\" style=\" width: " + windowwidth + " ;height: " + windowheight + "\"> <div class=\"title-bar\">" + "<div class='icon-and-text'><div class=\"icon-small\" style=\"" + $(this).attr("style") + ";\"></div>" + "<div class=\"title-bar-text\">" + windowname + "</div></div> <div class=\"title-bar-controls\"> <button aria-label=\"Close\"></button> </div> </div> <div class=\"window-body\"> <iframe src=\"" + iframelink + "\" frameborder=\"0\" style=\"padding:0px;\"></iframe> </div> </div>"
-        
-        $("body").append(windowTemplate).style
+        $body.append(windowTemplate);
     });
+
+    // Function to create the window template
+    function createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, posX, posY) {
+        return `
+            <div class="window draggable ui-draggable" style="width: ${windowWidth}; height: ${windowHeight}; left: ${posX}px; top: ${posY}px;">
+                <div class="title-bar">
+                    <div class="icon-and-text">
+                        <div class="icon-small" style="${iconStyle}"></div>
+                        <div class="title-bar-text">${windowName}</div>
+                    </div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <iframe src="${iframeLink}" frameborder="0" style="padding: 0px;"></iframe>
+                </div>
+            </div>
+        `;
+    }
 });
-
-
