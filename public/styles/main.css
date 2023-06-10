@@ -2,6 +2,10 @@ h1 { font-size: 2rem !important; }
 h2 { font-size: 1.5rem !important; }
 h3 { font-size: 1.17rem !important; }
 
+html, body {
+    height: 100%
+}
+
 .draggable {
     position: absolute;
     padding: 0px;
@@ -31,6 +35,17 @@ iframe {
     image-rendering: pixelated;
 }
 
+.icon-small {
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.icon:hover {
+    filter:invert()
+}
+
 
 body {
     background-color: #008080;
@@ -53,3 +68,19 @@ body {
     display: none;
 }
 
+.title-bar {
+    margin: 1px;
+}
+
+
+.window-body {
+    resize: both;
+}
+
+.icon-and-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
