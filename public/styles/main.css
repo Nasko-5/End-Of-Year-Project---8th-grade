@@ -12,20 +12,11 @@ html, body {
 }
 
 .containsiframe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-}
-
-iframe {
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 1;
-    margin:0px;
-    padding:0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
 }
 
 .icon {
@@ -51,7 +42,7 @@ body {
     background-color: #008080;
     scrollbar-width: 0px;  /* For Firefox */
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
-
+    overflow: hidden;
 }
 
 #programs {
