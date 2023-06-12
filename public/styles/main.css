@@ -17,7 +17,7 @@ html, body {
         justify-content: center;
         align-items: center;
         padding: 0px;
-}
+}   
 
 .icon {
     width: 50px;
@@ -64,14 +64,51 @@ body {
 }
 
 
-.window-body {
-    resize: both;
-}
-
 .icon-and-text {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 5px;
+    margin-left: 2px;
 }
+
+.window-body {
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+} 
+
+.experimental-window > .title-bar {
+    box-shadow: inset -1px -0px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -0px gray,inset 2px 2px #fff;
+    top: -19px;
+    position: absolute;
+    left: 1px;
+    width: calc(100% - 9px);
+    padding: 4px 3px 4px 4px;
+}
+
+.experimental-window > .window {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 2px;
+}
+
+.experimental-window > .window > iframe {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+/* 
+.title-bar {
+    position: initial;
+    width: auto;
+} */
