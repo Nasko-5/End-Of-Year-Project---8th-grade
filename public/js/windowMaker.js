@@ -20,22 +20,6 @@ $(document).ready(function() {
 
     // Function to create the window template
     function createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, posX, posY) {
-        // return `
-        //     <div class="window draggable" style="width: ${windowWidth}; height: ${windowHeight}; left: ${posX}px; top: ${posY}px;">
-        //         <div class="title-bar">
-        //             <div class="icon-and-text">
-        //                 <div class="icon-small" style="${iconStyle}"></div>
-        //                 <div class="title-bar-text">${windowName}</div>
-        //             </div>
-        //             <div class="title-bar-controls">
-        //                 <button aria-label="Close"></button>
-        //             </div>
-        //         </div>
-        //         <div class="window-body containsiframe">
-        //             <iframe src="${iframeLink}" frameborder="0" style="padding: 0px;"></iframe>
-        //         </div>
-        //     </div>
-        // `;
         return `
             <div style="width:${windowWidth}; left: ${posX}; top: ${posY}" class="draggable experimental-window">
                 <div class="title-bar">
