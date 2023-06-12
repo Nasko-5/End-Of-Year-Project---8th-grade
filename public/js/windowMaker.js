@@ -37,7 +37,7 @@ $(document).ready(function() {
         //     </div>
         // `;
         return `
-            <div style="width:${windowWidth}; left: ${windowHeight}; left: ${posX}; top: ${posY}" class="draggable experimental-window">
+            <div style="width:${windowWidth}; left: ${posX}; top: ${posY}" class="draggable experimental-window">
                 <div class="title-bar">
                     <div class="icon-and-text">
                         <div class="icon-small" style="${iconStyle}"></div>
@@ -49,7 +49,7 @@ $(document).ready(function() {
                     </div>
                 </div>
                 <div class="window">
-                    <iframe src="${iframeLink}" frameborder="0"></iframe>
+                    <iframe style="height: ${windowHeight};" src="${iframeLink}" frameborder="0"></iframe>
                 </div>
         </div>
      `;
