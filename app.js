@@ -21,6 +21,8 @@ app.use('/', require('./routes/clock.route'));
 
 app.use('/', require('./routes/aboutme.route'));
 
+app.use('/', require('./routes/aroundtheworld.route'));
+
 app.use((req, res, next) => {
   next(createError.NotFound());
 });

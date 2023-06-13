@@ -11,4 +11,17 @@ body {
   padding:0px;
 }
 
+p {
+  font-size: 12px;
+}
+
+li {
+  font-size: 12px;
+}
+
+.heading{
+  font-size:large;
+  text-align: center;
+}
+
 /* for some reason this isn't commiting to github? */
