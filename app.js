@@ -23,6 +23,10 @@ app.use('/', require('./routes/aboutme.route'));
 
 app.use('/', require('./routes/aroundtheworld.route'));
 
+app.use('/', require('./routes/files.route'));
+
+app.use('/', require('./routes/school.route'));
+
 app.use((req, res, next) => {
   next(createError.NotFound());
 });

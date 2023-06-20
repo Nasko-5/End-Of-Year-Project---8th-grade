@@ -18,10 +18,14 @@ $(document).ready(function() {
         $body.append(windowTemplate);
     });
 
+    $body.on('dbclick', '.file-link', function(){
+        console.log("DIE!!!")
+    })
+
     // Function to create the window template
     function createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, posX, posY) {
         return `
-            <div style="width:${windowWidth}; left: ${posX}; top: ${posY}" class="draggable experimental-window">
+            <div style="width:${windowWidth}; left: ${posX}px; top: ${posY}px" class="draggable experimental-window">
                 <div class="title-bar">
                     <div class="icon-and-text">
                         <div class="icon-small" style="${iconStyle}"></div>
