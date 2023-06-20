@@ -82,6 +82,10 @@
     background-image: url(/images/icons/directory_closed-3.png) !important;
 }
 
+.text {
+    background-image: url(/images/icons/file_lines-0.png)
+}
+
 .window-body {
     padding:2px;
     padding-right:10px;
@@ -96,6 +100,10 @@
 
 .field-row {
     font-size: 15px;
+}
+
+.window-body{
+    overflow: scroll !important;
 }
 </style>
 
@@ -116,8 +124,7 @@
         </div>
     </div>
 
-
-    <ul>
+    <ul id="file-list">
         <%- files %>
     </ul>
 </div>

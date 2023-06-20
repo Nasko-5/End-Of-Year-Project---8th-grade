@@ -18,9 +18,15 @@ $(document).ready(function() {
         $body.append(windowTemplate);
     });
 
-    $body.on('dbclick', '.file-link', function(){
-        console.log("DIE!!!")
+    var iframe = $('.window-iframe').contents();
+    var tELement = iframe.find('#file-list')
+
+    console.log(tELement.contents())
+
+    $(tELement).on('dbclick', '.file-link', function() {
+        console.log("doubliclkickl")
     })
+    
 
     // Function to create the window template
     function createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, posX, posY) {
@@ -37,7 +43,7 @@ $(document).ready(function() {
                     </div>
                 </div>
                 <div class="window">
-                    <iframe style="height: ${windowHeight};" src="${iframeLink}" frameborder="0"></iframe>
+                    <iframe class="window-iframe" style="height: ${windowHeight};" src="${iframeLink}" frameborder="0"></iframe>
                 </div>
         </div>
      `;

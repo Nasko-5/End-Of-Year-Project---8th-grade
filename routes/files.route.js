@@ -89,9 +89,7 @@ function generateLinks(files, req) {
 router.get('/files', (req, res) => {
   const filePath = path.join(baseDirectory, req.query.file || '');
   const filePathIsAFolder = !checkIfFile(filePath);
-  console.log(filePath);
-  console.log(filePathIsAFolder);
-
+  
   if (filePathIsAFolder) {
     const files = fs.readdirSync(filePath);
     const fileTypes = getFileTypes(filePath, files);
