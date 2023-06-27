@@ -52,10 +52,10 @@ function assembleLink(file, req) {
     const fileType = fileInfo[0];
     const fileName = fileInfo[1];
     const fileLink = fileInfo[2];
-
+   
     return `
       <li>
-        <div class="file-link" media-link=${fileLink}">
+        <div class="file-link" media-link="${fileLink}" fileType="${fileType}" windowName="${fileName}">
           <div class="${fileType} file-icon"></div>
           <p>${fileName}</p>
         </div>
