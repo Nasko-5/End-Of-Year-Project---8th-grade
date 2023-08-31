@@ -4,7 +4,7 @@ $(document).ready(function() {
     const $body = $('body');
 
     // Handle double-click event for elements with the "icon" class
-    $body.on('dblclick', '.icon', function() {
+    $body.on('click', '.icon', function() {
         const $this = $(this);
         const iframeLink = $this.attr('iframelink');
         const windowName = $this.attr('window-name');
@@ -15,9 +15,10 @@ $(document).ready(function() {
         const windowPosX = (window.innerWidth / 2) - (parseInt(windowWidth) / 2);
         const windowPosY = (window.innerHeight / 2) - (parseInt(windowHeight) / 2);
 
-        const windowTemplate = createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, windowPosX, windowPosY);
+        console.log("from programOpener")
+        createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, windowPosX, windowPosY, $body);
 
-        $body.append(windowTemplate);
+        //$body.append(windowTemplate);
     });
 });
 

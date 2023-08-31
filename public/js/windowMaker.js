@@ -1,6 +1,7 @@
 // Function to create the window template
-export function createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, posX, posY) {
-    return `
+export function createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, posX, posY, body) {
+    console.log("created window.")
+    body.append( `
         <div style="width:${windowWidth}; left: ${posX}px; top: ${posY}px" class="draggable experimental-window">
             <div class="title-bar">
                 <div class="icon-and-text">
@@ -16,5 +17,6 @@ export function createWindowTemplate(windowName, windowWidth, windowHeight, ifra
                 <iframe class="window-iframe" style="height: ${windowHeight};" src="${iframeLink}" frameborder="0"></iframe>
             </div>
     </div>
- `;
+ `);
+
 }

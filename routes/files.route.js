@@ -55,7 +55,7 @@ function assembleLink(file, req) {
    
     return `
       <li>
-        <div class="file-link" media-link="${fileLink}" fileType="${fileType}" windowName="${fileName}">
+        <div class="file-link file-selector" media-link="${fileLink}" fileType="${fileType}" windowName="${fileName}">
           <div class="${fileType} file-icon"></div>
           <p>${fileName}</p>
         </div>
