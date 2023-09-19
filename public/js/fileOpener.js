@@ -3,7 +3,7 @@ import { createWindowTemplate } from './windowMaker.js';
 $(document).ready(function() {
   $('body').bind('DOMSubtreeModified', function () {
     const $body = $('body');
-
+    console.log("what the fuckl")
     $('iframe').on("load", function () {
       var hoo = $(this).contents().find('.file-selector');
 

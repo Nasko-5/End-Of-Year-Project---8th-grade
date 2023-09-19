@@ -1,8 +1,11 @@
-// Function to create the window template
+import { highestZIndex } from './zIndex.js';
+
 export function createWindowTemplate(windowName, windowWidth, windowHeight, iframeLink, iconStyle, posX, posY, body) {
     console.log("created window.")
+
+    highestZIndex.value++;
     body.append( `
-        <div style="width:${windowWidth}; left: ${posX}px; top: ${posY}px" class="draggable experimental-window">
+        <div style="width:${windowWidth}; left: ${posX}px; top: ${posY}px; z-index: ${highestZIndex.value}" class="draggable experimental-window">
             <div class="title-bar">
                 <div class="icon-and-text">
                     <div class="icon-small" style="${iconStyle}"></div>
@@ -18,5 +21,4 @@ export function createWindowTemplate(windowName, windowWidth, windowHeight, ifra
             </div>
     </div>
  `);
-
 }

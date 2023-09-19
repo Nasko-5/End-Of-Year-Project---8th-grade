@@ -2,9 +2,9 @@ import { createWindowTemplate } from './windowMaker.js'
 
 $(document).ready(function() {
     const $body = $('body');
-
+    console.log("sanity")
     // Handle double-click event for elements with the "icon" class
-    $body.on('click', '.icon', function() {
+    $body.on('dbclick', '.icon', function() {
         const $this = $(this);
         const iframeLink = $this.attr('iframelink');
         const windowName = $this.attr('window-name');
